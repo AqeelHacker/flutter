@@ -1,5 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:widget_1/date_widget.dart';
+import 'package:widget_1/image_widget.dart';
+import 'package:widget_1/input_selection.dart';
+import 'package:widget_1/new_tab.dart';
+import 'package:widget_1/row_column.dart';
 import 'dialog.dart';   
 
 class ScaffoldWidget extends StatelessWidget {
@@ -14,27 +19,28 @@ class ScaffoldWidget extends StatelessWidget {
           onPressed: () {},
           icon: Icon(Icons.donut_large_outlined),
         ),
-        backgroundColor: Color.fromARGB(99, 80, 90, 110),
-        foregroundColor: Color.fromARGB(255, 255, 0, 0),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        foregroundColor: Color.fromARGB(255, 255, 255, 255),
       ),
-      body: Column(
+      body: ListView(
+        shrinkWrap: false,
         children: [
-            DialogWidget(),
+          DateWidget(),
+          ImageWidget(),
+          InputSelection(),
           Center(
-            child: Image.asset(
-              'assets/g1.jpg',
-              width: 1000,
-              height: 2500,
-            ),
+            child: DialogWidget(),
           ),
+          RowColumn(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.red,
-        unselectedItemColor: Color.fromARGB(99, 80, 90, 110),
+        unselectedItemColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
         currentIndex: 0,
-        items: [
+        items: [  
           BottomNavigationBarItem(
             icon: Icon(Icons.person_2_outlined),
             label: 'Profil',
@@ -44,21 +50,17 @@ class ScaffoldWidget extends StatelessWidget {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
-            label: 'Gift',
+            icon: Icon(Icons.cases_outlined),
+            label: 'shop',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.leave_bags_at_home_outlined),
+            icon: Icon(Icons.open_in_browser_outlined),
             label: 'Left',
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'increment value',
-        child: Icon(Icons.add),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: NewTabWidget(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
   }
 }
