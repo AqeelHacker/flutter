@@ -5,7 +5,7 @@ import 'package:widget_1/image_widget.dart';
 import 'package:widget_1/input_selection.dart';
 import 'package:widget_1/new_tab.dart';
 import 'package:widget_1/row_column.dart';
-import 'dialog.dart';   
+import 'dialog.dart';
 
 class ScaffoldWidget extends StatelessWidget {
   const ScaffoldWidget({super.key});
@@ -40,7 +40,7 @@ class ScaffoldWidget extends StatelessWidget {
         unselectedItemColor: Color.fromARGB(255, 255, 255, 255),
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
         currentIndex: 0,
-        items: [  
+        items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.person_2_outlined),
             label: 'Profil',
