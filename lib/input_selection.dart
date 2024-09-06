@@ -15,10 +15,10 @@ class _InputSelectionState extends State<InputSelection> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           TextField(
@@ -27,25 +27,25 @@ class _InputSelectionState extends State<InputSelection> {
             onChanged: (a) {
               setState(() {});
             },
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               label: Text("input nama"),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           TextField(
             controller: password,
             obscureText: true,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               label: Text("password"),
             ),
           ),
           Text(nama.text),
           Text(password.text),
-          Text('forgot password?'),
+          const Text('forgot password?'),
         ],
       ),
     );

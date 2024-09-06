@@ -14,17 +14,17 @@ class ScaffoldWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Garena Free Fire'),
+        title: const Text('Garena Free Fire'),
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.donut_large_outlined),
+          icon: const Icon(Icons.donut_large_outlined),
         ),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
-        foregroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+        foregroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
       body: ListView(
         shrinkWrap: false,
-        children: [
+        children: const [
           DateWidget(),
           ImageWidget(),
           InputSelection(),
@@ -37,10 +37,10 @@ class ScaffoldWidget extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.red,
-        unselectedItemColor: Color.fromARGB(255, 255, 255, 255),
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        unselectedItemColor: const Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         currentIndex: 0,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.person_2_outlined),
             label: 'Profil',

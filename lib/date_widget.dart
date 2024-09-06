@@ -31,7 +31,7 @@ class _DateWidgetState extends State<DateWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text("${selectedDate.toLocal()}".split(' ')[0]),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
           ElevatedButton(
@@ -39,7 +39,7 @@ class _DateWidgetState extends State<DateWidget> {
               _selectedDate(context),
               print(selectedDate.day + selectedDate.month + selectedDate.year)
             },
-            child: Text('Pilih Tanggal'),
+            child: const Text('Pilih Tanggal'),
           ),
         ],
       ),

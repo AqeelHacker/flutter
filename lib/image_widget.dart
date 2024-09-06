@@ -5,10 +5,10 @@ class ImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 100,
       height: 100,
-      child: Image(
+      child: const Image(
         image: AssetImage('assets/g1.jpg'),
         fit: BoxFit.cover,
       ),

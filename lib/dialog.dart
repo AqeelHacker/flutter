@@ -12,12 +12,14 @@ class DialogWidget extends StatelessWidget {
 }
 
 class MyLayout extends StatelessWidget {
+  const MyLayout({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Align(
         alignment: Alignment.topRight,
         child: ElevatedButton(
-          child: Text('show alert'),
+          child: const Text('show alert'),
           onPressed: () {
             showAlertDialog(context);
           },
@@ -27,13 +29,13 @@ class MyLayout extends StatelessWidget {
 
 showAlertDialog(BuildContext context) {
   Widget okButton = ElevatedButton(
-    child: Text("OK"),
+    child: const Text("OK"),
     onPressed: () {},
   );
 
   AlertDialog alert = AlertDialog(
-    title: Text("My Tittle"),
-    content: Text("This is my message."),
+    title: const Text("My Tittle"),
+    content: const Text("This is my message."),
     actions: [okButton],
   );
 
