@@ -56,7 +56,7 @@ class GopayWidget extends StatelessWidget {
               color: Colors.blue[900],
               borderRadius: BorderRadius.circular(15),
               gradient: LinearGradient(
-                colors: [Colors.blue[800]!, Colors.blue[400]!],
+                colors: [Colors.blue[800]!, Colors.blue[400]!,Colors.grey],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -67,7 +67,7 @@ class GopayWidget extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Rp832",
+                      "Rp10.000.000",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 24,
@@ -101,7 +101,7 @@ class GopayWidget extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Coins 10.000",
+                      "Gopay Coins 10.000",
                       style: TextStyle(
                         color: Colors.white70,
                         fontSize: 12,
@@ -166,7 +166,7 @@ class GopayWidget extends StatelessWidget {
                     crossAxisCount: 4, // 4 item per baris
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
-                    childAspectRatio: 1, // Proporsi grid item
+                    childAspectRatio: 1, // Proporsi grid item 
                   ),
                   itemCount:
                       4, // Total item yang ditampilkan (3 orang + 1 icon tambah)
@@ -228,7 +228,7 @@ class GopayWidget extends StatelessWidget {
           // Bagian Pembayaran
           Container(
             decoration: BoxDecoration(
-              color: Colors.grey[900],
+              color: Colors.grey[900],  
               borderRadius: BorderRadius.circular(15),
             ),
             padding: const EdgeInsets.all(16),
