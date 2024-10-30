@@ -59,7 +59,7 @@ class ScaffoldWidget extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: NewTabWidget(),
+      floatingActionButton: const NewTabWidget(),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
   }

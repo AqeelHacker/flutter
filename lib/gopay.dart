@@ -14,7 +14,7 @@ class GopayWidget extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0,
-        leading: CircleAvatar(
+        leading: const CircleAvatar(
           backgroundImage: AssetImage('assets/ppgopay.jpeg'),
         ),
         title: Container(
@@ -23,7 +23,7 @@ class GopayWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(fontSize / 2),
             boxShadow: [
               BoxShadow(
-                  color: Color.fromARGB(255, 85, 78, 78).withOpacity(0.5),
+                  color: const Color.fromARGB(255, 85, 78, 78).withOpacity(0.5),
                   spreadRadius: 5,
                   blurRadius: 7,
                   offset: const Offset(0, 3)),
@@ -41,7 +41,7 @@ class GopayWidget extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.help_outline, color: Colors.white),
+            icon: const Icon(Icons.help_outline, color: Colors.white),
             onPressed: () {},
           ),
         ],
@@ -66,7 +66,7 @@ class GopayWidget extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       "Rp10.000.000",
                       style: TextStyle(
                         color: Colors.white,
@@ -74,7 +74,7 @@ class GopayWidget extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Container(
                       padding: const EdgeInsets.symmetric(
                         vertical: 5,
@@ -84,13 +84,13 @@ class GopayWidget extends StatelessWidget {
                         color: Colors.white.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Row(
+                      child: const Row(
                         children: [
                           Text(
                             "GRATIS top up",
                             style: TextStyle(color: Colors.white),
                           ),
-                          const SizedBox(width: 4),
+                          SizedBox(width: 4),
                           Icon(Icons.add, color: Colors.white),
                         ],
                       ),
@@ -100,14 +100,14 @@ class GopayWidget extends StatelessWidget {
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       "Gopay Coins 10.000",
                       style: TextStyle(
                         color: Colors.white70,
                         fontSize: 12,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Container(
                       padding: const EdgeInsets.symmetric(
                         vertical: 5,
@@ -117,7 +117,7 @@ class GopayWidget extends StatelessWidget {
                         color: Colors.white.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Text(
+                      child: const Text(
                         "Aktivasi Pinjam",
                         style: TextStyle(color: Colors.white),
                       ),
@@ -125,7 +125,7 @@ class GopayWidget extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
-                Text(
+                const Text(
                   "Rp500.000 udah terpakai di September",
                   style: TextStyle(
                     color: Colors.white70,
@@ -137,7 +137,6 @@ class GopayWidget extends StatelessWidget {
           ),
           const SizedBox(height: 20),
 
-          // Bagian Kirim & Terima (diubah menjadi GridView)
           Container(
             decoration: BoxDecoration(
               color: Colors.grey[900],
@@ -147,7 +146,7 @@ class GopayWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Kirim & terima",
                   style: TextStyle(
                     color: Colors.white,
@@ -157,25 +156,23 @@ class GopayWidget extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
 
-                // GridView untuk profile icons
                 GridView.builder(
-                  shrinkWrap: true, // Agar bisa scroll dalam ListView
+                  shrinkWrap: true, 
                   physics:
-                      NeverScrollableScrollPhysics(), // Nonaktifkan scroll di dalam GridView
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4, // 4 item per baris
+                      const NeverScrollableScrollPhysics(), 
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4, // 
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
-                    childAspectRatio: 1, // Proporsi grid item 
+                    childAspectRatio: 1, 
                   ),
                   itemCount:
-                      4, // Total item yang ditampilkan (3 orang + 1 icon tambah)
+                      4, 
                   itemBuilder: (context, index) {
                     if (index == 3) {
-                      // Jika index 3, tampilkan ikon tambah
+                      
                       return _buildProfileIcon(null, "");
                     } else {
-                      // Jika tidak, tampilkan profil
                       List<String> profileNames = [
                         "Person 1",
                         "Person 2",
@@ -193,17 +190,16 @@ class GopayWidget extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
 
-                // GridView untuk action buttons
                 GridView.builder(
-                  shrinkWrap: true, // Agar bisa scroll dalam ListView
-                  physics: NeverScrollableScrollPhysics(),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4, // 4 item per baris
+                  shrinkWrap: true, 
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4, 
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                     childAspectRatio: 1,
                   ),
-                  itemCount: 4, // Total tombol aksi
+                  itemCount: 4, 
                   itemBuilder: (context, index) {
                     List<IconData> icons = [
                       Icons.send,
@@ -225,7 +221,6 @@ class GopayWidget extends StatelessWidget {
           ),
           const SizedBox(height: 20),
 
-          // Bagian Pembayaran
           Container(
             decoration: BoxDecoration(
               color: Colors.grey[900],  
@@ -235,7 +230,7 @@ class GopayWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Pembayaran",
                   style: TextStyle(
                     color: Colors.white,
@@ -246,14 +241,14 @@ class GopayWidget extends StatelessWidget {
                 const SizedBox(height: 16),
                 GridView.builder(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4, // 4 item per baris
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4, 
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                     childAspectRatio: 1,
                   ),
-                  itemCount: 7, // Total opsi pembayaran
+                  itemCount: 7, 
                   itemBuilder: (context, index) {
                     List<IconData> paymentIcons = [
                       Icons.phone_android,
@@ -285,7 +280,6 @@ class GopayWidget extends StatelessWidget {
     );
   }
 
-  // Widget untuk membuat ikon profil dalam Kirim & Terima
   Widget _buildProfileIcon(String? imagePath, String name) {
     return Column(
       children: [
@@ -294,12 +288,12 @@ class GopayWidget extends StatelessWidget {
           backgroundImage: imagePath != null ? AssetImage(imagePath) : null,
           backgroundColor: Colors.grey[800],
           child:
-              imagePath == null ? Icon(Icons.add, color: Colors.white) : null,
+              imagePath == null ? const Icon(Icons.add, color: Colors.white) : null,
         ),
         const SizedBox(height: 8),
         Text(
           name,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 12,
           ),
@@ -308,7 +302,6 @@ class GopayWidget extends StatelessWidget {
     );
   }
 
-  // Widget untuk membuat tombol aksi di bagian Kirim & Terima
   Widget _buildActionButton(IconData icon, String label) {
     return Column(
       children: [
@@ -316,7 +309,7 @@ class GopayWidget extends StatelessWidget {
         const SizedBox(height: 8),
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white70,
             fontSize: 12,
           ),
@@ -325,7 +318,6 @@ class GopayWidget extends StatelessWidget {
     );
   }
 
-  // Widget untuk membuat ikon pembayaran
   Widget _buildPaymentIcon(IconData icon, String label) {
     return Column(
       children: [
@@ -333,7 +325,7 @@ class GopayWidget extends StatelessWidget {
         const SizedBox(height: 8),
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white70,
             fontSize: 12,
           ),

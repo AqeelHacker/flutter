@@ -7,7 +7,7 @@ class DialogWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MyLayout();
+    return const MyLayout();
   }
 }
 

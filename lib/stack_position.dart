@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:widget_1/widget_function.dart';
 
 class StackPosition extends StatelessWidget {
   const StackPosition({super.key});
@@ -15,8 +16,8 @@ class StackPosition extends StatelessWidget {
                 Container(
                   child: SingleChildScrollView(
                     child: Container(
-                      decoration:
-                          const BoxDecoration(color: Color.fromARGB(255, 17, 250, 0)),
+                      decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 17, 250, 0)),
                       child: Column(
                         children: [
                           Container(
@@ -81,12 +82,13 @@ class StackPosition extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  padding: const EdgeInsets.only(top: 10, left: 20),
+                                  padding:
+                                      const EdgeInsets.only(top: 10, left: 20),
                                   decoration: const BoxDecoration(
                                       border: Border(
                                     bottom: BorderSide(color: Colors.grey),
                                   )),
-                                  child: Text(
+                                  child: const Text(
                                     "Transaksi",
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold),
@@ -100,6 +102,9 @@ class StackPosition extends StatelessWidget {
                                     crossAxisSpacing: 0,
                                     padding: const EdgeInsets.all(8),
                                     children: [
+                                      WidgetFunction('assets/pulsa.jpeg', 'pulsa'),
+                                      WidgetFunction('assets/pln.jpeg', 'PLN'),
+                                      WidgetFunction('assets/tv.jpeg', 'Langganan TV'),
                                       Container(
                                         child: const Column(
                                           children: [
@@ -208,12 +213,13 @@ class StackPosition extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  padding: const EdgeInsets.only(top: 10, left: 20),
+                                  padding:
+                                      const EdgeInsets.only(top: 10, left: 20),
                                   decoration: const BoxDecoration(
                                       border: Border(
                                     bottom: BorderSide(color: Colors.grey),
                                   )),
-                                  child: Text(
+                                  child: const Text(
                                     "Transaksi",
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold),

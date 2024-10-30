@@ -10,7 +10,7 @@ class NewTabWidget extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => NewTab()),
+          MaterialPageRoute(builder: (context) => const NewTab()),
         );
       },
       tooltip: 'Toko button',
